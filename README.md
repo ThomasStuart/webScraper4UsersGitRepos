@@ -1,9 +1,9 @@
 # Web Scrapper
 
 ## Terminal Install Packages:
-**npm init -y**
-**npm install puppeteer**
-**npm i node-fetch --save**
+**npm init -y**  <br>
+**npm install puppeteer** <br>
+**npm i node-fetch --save** <br>
 
 ## Terminal Command to run code:
 **node scrapers.js**

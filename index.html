@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>Web Scrapper</title>
+	</head>
+<body>
+<h1>Web Scrapper </h1>
+
+<h2>Terminal Install Packages: </h2>
+
+<p><strong>npm init -y</strong></p>
+
+<p><strong>npm install puppeteer</strong></p>
+
+<p><strong>npm i node-fetch --save</strong></p>
+
+<h2>Terminal Command to run code: </h2>
+
+<p><strong>node scrapers.js</strong></p>
+
+<h2>Code: </h2>
+
+<p>const puppeteer = require(&#39;puppeteer&#39;);</p>
+
+<p>async function scrapeProject(url)</p>
+
+<p> const browser = await puppeteer.launch();</p>
+
+<p> const page = await browser.newPage();</p>
+
+<p> await page.goto(url);</p>
+
+<h4> For an image </h4>
+
+<p> const <a href="">el1</a> = await page.$x(‘&lt;XPath&gt;’);</p>
+
+<p> const imgSrc = await el1.getProperty(&#39;src&#39;);</p>
+
+<p> const srcTxt = await imgSrc.jsonValue();</p>
+
+<h4>For text </h4>
+
+<p> const <a href="">el2</a> = await page.$x(‘&lt;XPath&gt;’);</p>
+
+<p> const txt = await el2.getProperty(&#39;textContent&#39;);</p>
+
+<p> const rawTxt = await txt.jsonValue();</p>
+
+<p> console.log(rawTxt);</p>
+
+<p> browser.close();</p>
+
+<p>}</p>
+
+<p>scrapeProject(&#39;https://github.com/ThomasStuart/prework-repo&#39;);</p>
+
+</body>
+</html>
+
