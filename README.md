@@ -5,11 +5,11 @@
 **npm install puppeteer**
 **npm i node-fetch --save**
 
-##Terminal Command to run code:
+## Terminal Command to run code:
 **node scrapers.js**
 
 
-##Code:
+## Code:
 const puppeteer = require('puppeteer');
 
 async function scrapeProject(url){
@@ -17,12 +17,12 @@ async function scrapeProject(url){
   const page    = await browser.newPage();
   await page.goto(url);
 
-####   For an image
+#### For an image
    const [el1]  = await page.$x(‘<XPath>’);
    const imgSrc = await el1.getProperty('src');
    const srcTxt = await imgSrc.jsonValue();
 
-### For text
+#### For text
   const [el2]  = await page.$x(‘<XPath>’);
   const txt    = await el2.getProperty('textContent');
   const rawTxt = await txt.jsonValue();
